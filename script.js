@@ -1,21 +1,29 @@
-// Hire Me Button
-document
-  .getElementById("hireBtn")
-  .addEventListener("click", function () {
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-    alert("Thanks for visiting my portfolio!");
+window.addEventListener("scroll", () => {
 
-});
+    let current = "";
 
-// Contact Form
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (e) {
+    sections.forEach(section => {
 
-    e.preventDefault();
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
 
-    alert("Message Sent Successfully!");
+        if(pageYOffset >= sectionTop - 150){
+            current = section.getAttribute("id");
+        }
 
-    this.reset();
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === `#${current}`){
+            link.classList.add("active");
+        }
+
+    });
 
 });

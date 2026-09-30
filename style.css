@@ -160,23 +160,6 @@ header{
 }
 
 
-.btn{
-    padding: 14px 30px;
-    border: none;
-    background: #38bdf8;
-    color: #020617;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(56,189,248,0.5);
-}
-
 /* Hero Circle */
 .hero-image{
     flex: 1;
